@@ -1,4 +1,4 @@
-# Pocket Portfolio App (WIREFRAME)
+# Pocket Portfolio App
 
 Users will be able to create a profile, add their portfolio positions/holdings, and view their ROI in a quick and implistic way.
 
