@@ -1,0 +1,81 @@
+/*Mobile First*/
+.homeLink,
+.dashboardLink,
+.holdingsLink,
+.loginLink {
+  text-decoration: none;
+  padding: 15px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.links {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  background-color: gray;
+  text-align: center;
+}
+
+.links .homeLink:hover,
+.dashboardLink:hover,
+.holdingsLink:hover,
+.loginLink:hover {
+  background: rgb(209, 33, 136);
+  /* letter-spacing: 0.5px; */
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 450px) {
+  .homeLink,
+  .dashboardLink,
+  .holdingsLink,
+  .loginLink {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+/**
+ *  Tablet Vertical
+ */
+@media screen and (min-width: 620px) {
+  .homeLink,
+  .dashboardLink,
+  .holdingsLink,
+  .loginLink {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+    float: left;
+    color: white;
+    font-weight: bold;
+  }
+
+  .links {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+@media screen and (min-width: 960px) {
+}
+
+/**
+ *  Desktop
+ */
+@media screen and (min-width: 1200px) {
+}

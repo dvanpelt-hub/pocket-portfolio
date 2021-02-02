@@ -1,0 +1,26 @@
+.login-form {
+  text-align: center;
+  position: center;
+}
+
+/**
+ *  Tablet Vertical
+ */
+@media screen and (min-width: 620px) {
+  .login-form,
+  h3 {
+    font-size: 30px;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+@media screen and (min-width: 960px) {
+}
+
+/**
+ *  Desktop
+ */
+@media screen and (min-width: 1200px) {
+}

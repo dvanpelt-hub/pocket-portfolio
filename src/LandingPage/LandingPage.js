@@ -1,38 +1,32 @@
 import React, { Component } from 'react'
+import './LandingPage.css';
 
 export default class LandingPage extends Component {
   render() {
     return (
-      <div>
+      <div className="landingPage">
         <header>
         <h1>Pocket Portfolio Landing Page</h1>
-        <button type="submit">Log in</button>
-        <button type="submit">Sign up</button>
+        <button className="join_button" type="submit">Sign up</button>
       </header>
-      <section>
-        <header>
+      <section className="briefOV">
           <h3>Your ROI in the palm of your hand</h3>
-        </header>
         <p>[<em>placeholder for screenshot of ROI tracker. possibly a background image related to stocks.</em>]</p>
         <p>
           Pocket Portfolio provides an updated real-time ROI for your stock
           portfolio.
         </p>
       </section>
-      <section>
-        <header>
+      <section className="appDesc">
           <h3>View your holdings and relative ROI</h3>
-        </header>
         <p>[<em>placeholder for screenshot of holdings</em>]</p>
         <p>Portfolio holdings, purchase price, current price, and ROI.</p>
       </section>
-      <section>
-        <header>
+      <section className="signUpForm">
           <h3>Sign up to start keeping track!</h3>
-        </header>
         <form className="signup-form">
-          <div>
-            <label>First name</label>
+          <div className="first-name">
+            <label htmlFor="first-name">First name</label>
             <input
               placeholder="First Name"
               type="text"
@@ -40,8 +34,8 @@ export default class LandingPage extends Component {
               id="first-name"
             />
           </div>
-          <div>
-            <label>Last name</label>
+          <div className="last-name">
+            <label htmlFor="last-name">Last name</label>
             <input
               type="text"
               name="last-name"
@@ -49,15 +43,19 @@ export default class LandingPage extends Component {
               placeholder="Last Name"
             />
           </div>
-          <div>
-            <label>Email</label>
+          <div className="email">
+            <label htmlFor="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>          
+          <div className="username">
+            <label htmlFor="username">Username</label>
             <input type="text" name="username" id="username" />
           </div>
-          <div>
-            <label>Password</label>
+          <div className="password">
+            <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" />
           </div>
-          <button type="submit">Sign Up</button>
+          <button className="join_button" type="submit">Sign Up</button>
         </form>
       </section>
       </div>

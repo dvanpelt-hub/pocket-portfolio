@@ -1,40 +1,53 @@
 import React from "react";
-import dummyHoldings from "../App/dummyHoldings";
-import StockSearch from '../StockSearch/StockSearch';
-import "./Holdings.css"
+import StockSearch from "../StockSearch/StockSearch";
+import "./Holdings.css";
 
 export default class Holdings extends React.Component {
-  state = {
-    holdings: [],
-    ROI: [],
-    quantity: 0,
-  };
-
-  componentDidMount() {
-    this.setState(dummyHoldings);
-  }
+  // handleNewStock = (e) => {
+  //   this.setState({
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
   render() {
-    const mapData = this.state.holdings.map((stock) => {
-      return (
-        <li key={stock.id}>
-          {stock.TickerSymbol}, 
-          Purchase Price: ${stock.PurchasePrice}, 
-          Current Price: ${stock.CurrentPrice}, 
-          ROI: {((stock.CurrentPrice-stock.PurchasePrice)/stock.PurchasePrice*100).toFixed(2)}%
-        </li>
-      );
-    });
+    // This will be used once database has been created
+    // const mapData = this.state.holdings.map((stock) => {
+    //   return (
+    //     <li key={stock.id}>
+    //       {stock.TickerSymbol}, Purchase Price: ${stock.PurchasePrice}, Current
+    //       Price: ${stock.CurrentPrice}, ROI:{" "}
+    //       {(
+    //         ((stock.CurrentPrice - stock.PurchasePrice) / stock.PurchasePrice) *
+    //         100
+    //       ).toFixed(2)}
+    //       %
+    //     </li>
+    //   );
+    // });
     return (
-      <div>
+      <div className="holdings">
         <header>
-          <h2>Your Holdings:</h2>
+          <h2>Your Current Position:</h2>
         </header>
-        <ul>{mapData}</ul>
+        <ul className="holdingsList">
+          <li>Ticker Symbol: {this.props.tickerSymbol}</li>
+          <li># of shares: {this.props.quantity}</li>
+          <li>Purchase Price: {this.props.purchasePrice}</li>
+          <li>Current Price: {this.props.currentPrice}</li>
+          <li>ROI (%): {this.props.percentageROI}</li>
+          <li>Gain/Loss: {this.props.valueROI}</li>
+          <button onClick={this.props.updateROI}>Update ROI</button>
+        </ul>
         <div>
-          <StockSearch quantity={this.state.quantity} />
+          <StockSearch
+            getStockPrice={this.props.getStockPrice}
+            updateStock={this.props.updateStock}
+            setQuantity={this.props.setQuantity}
+            setPurchasePrice={this.props.setPurchasePrice}
+            quantity={this.props.quantity}
+            tickerSymbol={this.props.tickerSymbol}
+          />
         </div>
-        <button onClick={this.mapData}>Update</button>
       </div>
     );
   }

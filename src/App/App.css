@@ -1,0 +1,17 @@
+/**
+ *  Tablet Vertical
+ */
+@media screen and (min-width: 620px) {
+}
+
+/**
+ *  Tablet Horizontal
+ */
+@media screen and (min-width: 960px) {
+}
+
+/**
+ *  Desktop
+ */
+@media screen and (min-width: 1200px) {
+}

@@ -1,0 +1,30 @@
+.dashboard {
+  position: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+h3 {
+  position: center;
+  text-align: center;
+}
+
+/**
+ *  Tablet Vertical
+ */
+@media screen and (min-width: 620px) {
+}
+
+/**
+ *  Tablet Horizontal
+ */
+@media screen and (min-width: 960px) {
+}
+
+/**
+ *  Desktop
+ */
+@media screen and (min-width: 1200px) {
+}

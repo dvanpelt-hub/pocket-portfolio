@@ -1,4 +1,44 @@
-ul,
+.holdingsList,
 li {
   list-style-type: none;
+  margin: 0px 0px 15px 0px;
+  font-size: 18px;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.holdings {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.holdingsList {
+  font-size: 16px;
+}
+
+/**
+ *  Tablet Vertical
+ */
+@media screen and (min-width: 620px) {
+  .holdingsList,
+  li {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+@media screen and (min-width: 960px) {
+}
+
+/**
+ *  Desktop
+ */
+@media screen and (min-width: 1200px) {
 }
